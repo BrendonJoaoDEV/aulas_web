@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Uso de 'figure' e 'picture'</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Exemplo de Uso das Tags 'figure' e 'picture'</h1>
+
+            <article>
+                <h2>1. Exemplo de uso da tag 'figure'</h2>
+                <p>A tag 'figure' é usada para agrupar uma imagem com sua legenda ou descrição</p>
+                <figure>
+                    <img src="/aula004_imagens_html/img/montanha.jfif" alt="Paisagem montanhosa durante o pôr do sol">
+                    <figcaption>Uma bela paisagem montanhosa nevada.</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h2>2. Exemplo de uso da tag 'picture'</h2>
+                <p>A tag 'picture' é usada para fornecer diferentes versões de uma imagem,
+                    de acordo com o tamanho da tela ou a resolução.</p>
+                <p>O navegador escolhe automaticamente a versão mais adequada da imagem.</p>
+                <picture>
+                    <source srcset="/aula004_imagens_html/img/floresta2.jfif" media="(max-width: 1080px)">
+                    <source srcset="/aula004_imagens_html/img/floresta3.jfif" media="'(min-width: 400px)">
+                    <img src="/aula004_imagens_html/img/floresta.jfif" alt="Descrição da imagem">
+                </picture>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Exemplo de Uso HTML5 - Todos os direitos reservados./p>
+    </footer>
+</body>
+</html>
