@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Display Block, Inline e Inline-Block</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h2>1. Display: Block</h2>
+        <p>
+            Elementos com display: block ocupam toda a largura disponível, criando uma nova linha antes e depois do elemento.
+        </p>
+        <div class="block">
+            Este é um bloco. Ele ocupa toda a largura disponível e cria uma quebra de linha.
+        </div>
+        <div class="block">
+            Outro bloco, o que mosyta que os blocos vão para a próxima linha.
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>2. Display: Inline</h2>
+        <p>
+            Elementos com display: inline se alinham horizontalmente, respeitando apenas o seu conteúdo e não criam quebras de linha.
+        </p>
+        <span class="inline">Este é um elemento inline.</span>
+        <span class="inline">Outro elemento inline.</span>
+        <span class="inline">Mais um elemento inline.</span>
+    </div>
+
+    <div class="container">
+        <h2>3. Display: Inline-Block</h2>
+        <p>
+            Elementos com display: inline-block se alinham horizontalmente, mas podem ter largura e altura definidas, ao contrário do inline.
+        </p>
+        <div class="inline-block">Este é um elemento inline-block.</div>
+        <div class="inline-block">Outro elemento inline-block.</div>
+        <div class="inline-block">Mais um elemento inline-block.</div>
+    </div>
+</body>
+</html>
