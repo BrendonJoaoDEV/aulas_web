@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+article {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para os parágrafos dentro do artigo */
+article p {
+    background-color: #e0f7fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Estilo para o subtítulo específico dentro do header */
+article header .subtitulo {
+    font-style: italic;
+    color: #00796b;
+}
+
+/* Estilo específico para o título do artigo */
+article header h1 {
+    color: #004d40;
+}
+
+/* Troque div pelo seletor de sua preferência */
+div p {
+    background-color: #ff0000;
+}
