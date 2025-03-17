@@ -1,0 +1,22 @@
+body {
+    color: #333;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    /* Não será herdado, essa propriedade é específica */
+    border: 1px solid salmon;
+}
+
+/* Estilo específico para o cabeçalho */
+header {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo específico para o rodapé */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
