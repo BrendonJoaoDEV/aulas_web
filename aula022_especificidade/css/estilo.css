@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 5px;
+}
+
+body {
+    margin: 0px auto;
+    width: 50%;
+}
+
+header {
+    background-color: #3e0303;
+    padding: 40px;
+}
+
+h1 {
+    font-family: Georgia;
+    color: #a52a2a;
+}
+
+h2 {
+    font-family: Georgia;
+    font-weight: bolder;
+}
+
+p {
+    /* Remova o !important para ver a mudança no site */
+    color: #5f9ea0 !important;
+    font-family: Arial, Helvetica;
+    font-size: 1.3rem;
+}
+
+.destaque {
+    color: chocolate;
+}
