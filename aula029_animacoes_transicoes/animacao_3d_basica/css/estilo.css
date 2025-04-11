@@ -1,0 +1,83 @@
+/* Estilo do corpo da página */
+body {
+    display: flex; /* Layout flexbox para centrallização */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da viewport */
+    background-color: #f0f0f0; /* Cor de fundo */
+    perspective: 1000px; /* Define a profundidade do espaço 3D */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse */
+}
+
+/* Container da cena 3D - onde a mágica acontece */
+.cena-3d {
+    width: 200px; /* Largura do cubo */
+    height: 200px; /* Altura do cubo */
+    position: relative; /* Permite posicionamento absoluto dos filhos */
+    transform-style: preserve-3d; /* MUITO IMPORTANTE: Mantém transformações 3D nos filhos */
+    animation: girar 8s infinite linear; /* Aplica animação de rotação */
+}
+
+/* Definição da animação de rotação */
+@keyframes girar {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    } /* Estado inicial */
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    } /* Estado final */
+}
+
+/* Estilo base para todas as faces do cubo */
+.face {
+    position: absolute; /* posicionamento absoluto dentro da cena */
+    width: 200px; /* Largura igual ao container */
+    height: 200px; /* Altura igual ao container */
+    opacity: 0.8; /* Leve transparência para efeito visual */
+    display: flex; /* Flexbox para centralizar conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    font-size: 24px; /* Tamanho do texto */
+    font-weight: bold; /* Texto em negrito */
+    color: white; /* Cor do texto */
+    border: 2px solid white; /* Borda branca */
+    box-sizing: border-box; /* Inclui borda no cálculo do tamanho */
+}
+
+/* Posicionamento das faces do cubo (cada face tem uma transformação única) */
+
+/* Face frontal - posicionada 100px "para frente" no eixo Z */
+.frente {
+    transform: translateZ(100px);
+    background-color: #3498db;
+}
+
+/* Face traseira - posicionada 100px "para trás" e rotacionada 180° em Y */
+.tras {
+    transform: translateZ(-100px) rotateY(180deg);
+    background-color: #e74c3c;
+}
+
+/* Face direita - movifa para direita no X e rotacionada 90° em Y */
+.direita {
+    transform: translateX(100px) rotateY(90deg);
+    background-color: #2ecc71;
+}
+
+/* Face esquerda - movida para esquerda no X e rotacionada -90° em Y */
+.esquerda {
+    transform: translateX(-100px) rotateY(-90deg);
+    background-color: #f1c40f;
+}
+
+/* Face superior - movida para cima no Y e rotacionada 90° em X */
+.topo {
+    transform: translateY(-100px) rotateX(90deg);
+    background-color: #9b59b6;
+}
+
+/* FAce inferior - movida para baixo no Y e rotacionada -90° em X */
+.base {
+    transform: translateY(100px) rotateX(-90deg);
+    background-color: #1abc9c;
+}
