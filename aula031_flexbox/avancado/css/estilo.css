@@ -79,3 +79,80 @@ header, nav, main, section, aside, footer {
     background-color: #e4e4e4;
     flex: 1; /* Ocupa 1 parte do espaço disponível */
 }
+
+/* Módulo 5: Estilização do Rodapé */
+
+.rodape {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+
+    /* Flexbox para organizar múltiplos elementos no rodapé */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Módulo 6: Adaptações para Responsividade */
+@media (max-width: 768px) {
+    /* Quando a tela for menor que 768px */
+
+    .conteudo-principal {
+        flex-direction: column; /* Muda a direção para empilhar o conteúdo */
+    }
+
+    .area-conteudo, .barra-lateral {
+        /* flex: 1; Ambas ocupam a mesma proporção */
+        width: 100%; /* Ocupam toda a largura */
+    }
+
+    .navegacao {
+        flex-direction: column; /* Empilha os links de navegação */
+    }
+
+    .navegacao a {
+        border-bottom: 1px solid #555; /* Adiciona separação entre links */
+    }
+}
+
+/* Módulo 7: Melhorias Visuais e Detalhes */
+
+/* Espaçamento consistente */
+body > * {
+    padding: 20px;
+}
+
+/* Sombra no banner para profundidade */
+.banner {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Borda entre conteúdo e barra lateral */
+.barra-lateral {
+    border-left: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+    .barra-lateral {
+        border-left: none;
+        border-top: 1px solid #ccc;
+    }
+}
+
+/* Espaçamento interno para os conteúdos */
+.area-conteudo, .barra-lateral {
+    padding: 20px;
+}
+
+/* Estilo para títulos */
+h1, h2, h3 {
+    margin-bottom: 15px;
+}
+
+/* Estilo para parágrafos */
+p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
