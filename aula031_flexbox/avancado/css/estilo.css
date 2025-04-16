@@ -1,0 +1,81 @@
+/* Módulo 1: Configurações Básicas e Reset */
+
+/* Reset básico para remover margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuração do corpo do documento */
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* Garante que o body ocupe pelo menos toda a altura da tela */
+    display: flex; /* Ativa flexbox box no body */
+    flex-direction: column; /* Organiza os filhos em coluna (header, main, footer) */
+}
+
+/* Estilo básico para todas as seções (apenas para visualização durante o desenvolvimento */
+header, nav, main, section, aside, footer {
+    padding: 20px;
+    border: 1px dashed #ccc; /* Borda tracejada para visualização */
+}
+
+/* Módulo 2: Estilização do Banner */
+.banner {
+    background-color: #4a6fa5;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    /* Flexbox para alinhar conteúdo verticalmente (se houver múltiplos elementos */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinha verticalmente */
+    align-items: center; /* Alinha horizontalmente */
+    min-height: 150px; /* Altura mínima */
+}
+
+/* Módulo 3: Estilização da Navegação */
+.navegacao {
+    background-color: #333; /* Cor de fundo escura */
+    /* Flexbox para alinhar os itens de navegação horizontalmente */
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    flex-wrap: wrap; /* Permite que os items quebrem para a linha seguinte em telas pequenas */
+}
+
+/* Estilo dos dos links de navegação */
+.navegacao a {
+    color: white;
+    text-decoration: none; /* Remove sublinhado */
+    padding: 15px 20px;
+    text-align: center;
+    transition: background-color 0.3s; /* Transição suave çara hover */
+}
+
+.navegacao a:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse */
+}
+
+/* Módulo 4: Estilização do Conteúdo Principal */
+.conteudo-principal {
+    /* Flexbox para organizar a área de conteúdo e a barra lateral */
+    display: flex;
+    flex: 1; /* Faz com que o main ocupe todo o espaço disponível entre header e footer */
+
+    /* Layout padrão: barra lateral à direita */
+    flex-direction: row;
+
+    /* Para Telas pequenas, vamos mudar para coluna (abaixo no módulo responsivo) */
+}
+
+.area-conteudo {
+    background-color: #f4f4f4;
+    flex: 3; /* Ocupa 3 partes do espaço disponível */
+    min-height: 400px; /* ALtura mínima */
+}
+
+.barra-lateral {
+    background-color: #e4e4e4;
+    flex: 1; /* Ocupa 1 parte do espaço disponível */
+}
