@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    font-family: "roboto";
+    font-weight: bold;
+}
+
+/* Estilos do corpo da página */
+/* Usa flexbox com direção em coluna */
+/* Garante que o body ocupe pelo menos toda a altura da viewport */
+body {
+    display: flex; /* Ativa o flexbox */
+    min-height: 100vh; /* 100% da altura da viewport */
+    flex-direction: column; /* Organiza os filhos verticalmente */
+    margin: 0; /* Remove margens padrão */
+}
+
+/* Containe principal (main) */
+/* Também usa flexbox para orgnaizar seus filhos */
+/* flex: 1; Faz com que ocupe todo o espaço disponível entre header e footer1 */
+main {
+    display: flex; /* Ativa o felxbox para os filhos diretos */
+    flex: 1; /* Cresce para ocupar todo o espaço vertical disponível */
+}
+
+/* Estilos para o artigo principal */
+/* flex: 1; Faz com que ocupe todo o espaço restante */
+/* order: 1; Define que será o primeiro item na ordem visual */
+main > article {
+    flex: 1; /* Ocupa todo o espaço disponível */
+    order: 1; /* Ordem de exibição (1° lugar) */
+}
+
+/* Estilos compartilhados para nav e aside */
+/* flex: 0 0 20vw; - Não cresce, não encolhe, largura fixa de 20 vw */
+main > nav,
+main > aside {
+    flex: 0 0 20vw; /* Largura fixa de 20%  da viewport */
+}
+
+/* Estilos específicos para a navegação (nav) */
+/* order: 3; Define que será o terceiro item na ordem visual */
+main > nav {
+    background: #d7e8d4; /* Cor de fundo verde claro */
+    order: 3; /* Ordem de exibição (3° lugar) */
+}
+
+/* Estilos específicos para o aside (barra lateral) */
+/* order: 2; Define que será o segundo item na ordem visual */
+main > aside {
+    background: beige; /* Cor de fundo bege */
+    order: 2; /* Ordem de exibição (2° lugar) */
+}
+
+/* Estilos compartilhados para header e footer */
+/* Altura fixa de 20 vh (20% da altura da viewport) */
+/* Mesma cor de fundo para ambos */
+header, footer {
+    background: rgb(242, 116, 6); /* Cor de fundo verde-amarelado */
+    height: 20vh; /* Altura de 20% d viewport */
+}
+
+/* Estilos de padding para todos os elementos estruturais */
+/* Aplica 1em de padding em todos os lados */
+header,
+footer,
+article,
+nav,
+aside {
+    padding: 1em; /* Espaçamento interno de 1 unidade relativa ao tamanho da fonte */
+}
+
+/* Explicação das unidaddes de medida utilizadas: */
+
+/* "vh" (viewport height): Unidade relativa à altura da viewport. */
+/*     Ex: 20vh = 20% da altura da área visível do navegador */
+
+/* "vw" (viewport width): Unidade relativa à largura da viewport. */
+/*     Ex: 20vw = 20% da largura da área visível do navegador */
+
+/* "em": Unidade relativa ao tamanho da fonte do elemento pai. */
+/*     Ex: Se o elemento pai tem font-size de 16px, 1em = 16px */
