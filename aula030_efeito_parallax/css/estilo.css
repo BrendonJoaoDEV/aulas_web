@@ -1,0 +1,36 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Primeira imagem de fundo */
+.parallax1 {
+    background-image: url("../img/pinkbear.jfif");
+}
+
+/* Segunda imagem de fundo */
+.parallax2 {
+    background-image: url(../img/pinkcollage.jfif);
+}
+
+.content {
+    height: 100vh; /* 100% da altura da viewport - vai ocupar toda a altura visível da tela */
+    background-color: rgba(255, 255, 255, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
